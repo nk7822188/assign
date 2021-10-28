@@ -1,4 +1,7 @@
-
+body{
+  background-image: linear-gradient(rgb(72, 36, 204),yellowgreen,orangered);
+  height: 555px;
+}
 .pq{
   position: absolute;
   bottom: 70px;
@@ -56,35 +59,62 @@
   background-color: aqua;
 }
 
-
-
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media screen  and (max-width:1100px){
+  body{
+    width: 98vw;
+    text-align: center;
+  
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .heading{
+    width: 90vw;
+    font-size: 10vw;
+    margin: 5vw;
   }
-  to {
-    transform: rotate(360deg);
+  .sm{
+    margin: 0;
+    width:80vw;
+    height: 10vw;
+    position: absolute;
+    left: 9.5vw;
+    top: 60vw;
+    font-size: 5vw;
   }
+  .ms{
+    margin: 0;
+    width: 80vw;
+    height: 10vw;
+    position: absolute;
+    left: 9.5vw;
+    top: 80vw;
+    font-size: 5vw;
+  }
+  .pq{
+    width: 90vw;
+    height: 70vw;
+    position: absolute;
+    left: 4vw;
+    top: 190vw;
+
+  }
+  .qp{
+    width: 90vw;
+    height: 70vw;
+    position: absolute;
+    left: 4vw;
+    top: 110vw;
+  }
+  .h{
+    font-size: 7vw;
+  }
+  .p{
+     font-size: 4vw;
+  }
+  
 }
+   
+  
+
+
+
+
+

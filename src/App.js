@@ -1,41 +1,44 @@
-//import logo from './logo.svg';
-import './App.css';
 import {Component} from "react";
-export class ClassComponent extends Component{
-  render(){
-    return(
-      <div className="pq">
-        <h1>This is created using Functional Based Components</h1>
-        <p>This is done using external css</p>
-        <p style={{color:"blue"}}>This is done using inline css </p>
-      </div>
-    );
+import './App.css';
+import {ClassComponent,FunctionComponent} from "./component/assignment";
+
+class App extends Component{
+  state={
+    classComponent:false,
+    functionComponent:false,
+  }
+  updatedetailsOfclass =()=>{
+    if(this.state.classComponent){
+      this.setState({classComponent:false})
+    }else {
+      this.setState({classComponent:true})
+    }
+
+  }
+  updatedetailsOffunction = ()=>{
+    if(this.state.functionComponent){
+      this.setState({functionComponent:false})
+    }else {
+      this.setState({functionComponent:true})
+    }
   }
 
-}
- export function FunctionComponent() {
-   return(
-    <div className="qp">
-      <h1>This is created using Functional Based Components</h1>
-      <p>This is done using external css</p>
-      <p style={{color:"blue"}}>This is done using inline css</p>
-    </div>
-   );
- }
- 
-
-
-
-
-function App() {
+  render(){
   return (
     <div className="App">
-      <h1 className="heading" >Styling using Functional and Class Component </h1>
-      <button className="sm"> this is functional Component</button>
-      <button className="ms">this is class Component</button>
+      <h1 className="heading">Styling using Functional and Class Component </h1>
+      <button className="sm" onClick={this.updatedetailsOffunction}> this is functional Component</button>
+      <button className="ms" onClick={this.updatedetailsOfclass}>this is class Component</button>
+       <div>
+         <div style={{visibility:this.state.functionComponent?"visible":"hidden"}}><FunctionComponent/></div>
+         <div style={{visibility:this.state.classComponent?"visible":"hidden"}}><ClassComponent/></div>
+       </div>
+     
+      
      
     </div> 
   );
+  }
 }
 
 export default App;
